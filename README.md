@@ -18,7 +18,7 @@
 
 每天一份中文技术日报，聚焦 **Agent 架构与自进化、训练与推理方法、推理成本、模型与评测**的真实进展。只收改变了能力边界、单位成本或做法的信息；行业动态作为背景放在开篇，不单独成章。
 
-[在线浏览](https://whykathy.github.io/ai-tech-radar-daily/) · [浏览全部归档](ARCHIVE.md) · [RSS 订阅](feed.xml) · [收录口径与生成规范](PROMPT.md) · [反馈与纠错](https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose)
+[在线浏览](https://whykathy.github.io/ai-tech-radar-daily/) · [浏览全部归档](ARCHIVE.md) · [RSS 订阅](feed.xml) · [收录口径](#-收录口径) · [反馈与纠错](https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose)
 
 <!-- latest:start -->
 ## 📡 最新一期
@@ -72,7 +72,7 @@
 
 ## ⚙️ 更新机制
 
-- 每天 09:00（CST）由定时任务检索过去 48 小时的进展，按 [`PROMPT.md`](PROMPT.md) 生成 `daily/YYYY-MM-DD.md`。
+- 每天 09:00（CST）由定时任务检索过去 48 小时的进展，按内部生成规范 `PROMPT.md` 生成 `daily/YYYY-MM-DD.md`（该文件不随仓库发布）。
 - 发布前 [`scripts/build_index.py`](scripts/build_index.py) 从全部日报派生 `ARCHIVE.md`、`feed.xml`、本页的「最新一期」与 `index.html`；[`scripts/check_report.py`](scripts/check_report.py) 检查章节、来源链接、待核实数量与公开文风。
 - 在线浏览页首屏直接内嵌**最新一期全文**与「今日速览」，无需点开 md；左侧选日期可切换往期。
 - 手动重建门面：`python3 scripts/build_index.py`；手动质检：`python3 scripts/check_report.py 2026-11-28`。
