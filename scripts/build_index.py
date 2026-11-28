@@ -250,7 +250,7 @@ def update_readme(reports: list[dict], latest_text: str) -> None:
     if start not in text or end not in text:
         raise SystemExit("README.md 缺少 latest 标记块，无法更新最新一期")
     latest = list(reversed(reports))[:5]
-    lines = ["## 最新一期", ""]
+    lines = ["## 📡 最新一期", ""]
     if latest:
         newest = latest[0]
         lines.append(

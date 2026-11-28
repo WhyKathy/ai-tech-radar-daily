@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="AI Tech Radar - 每日 AI 技术雷达">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050d16"/>
+      <stop offset="42%" stop-color="#0a2438"/>
+      <stop offset="78%" stop-color="#0d4d5c"/>
+      <stop offset="100%" stop-color="#115e59"/>
+    </linearGradient>
+    <radialGradient id="sweep" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(1000 155) scale(150)">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#22d3ee" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.07"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0 H0 V30" fill="none" stroke="#7dd3fc" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <clipPath id="rr"><rect width="1200" height="300" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#rr)">
+    <rect width="1200" height="300" fill="url(#sky)"/>
+    <rect width="900" height="300" fill="url(#grid)"/>
+
+    <!-- 雷达 -->
+    <g transform="translate(1000 155)">
+      <circle r="146" fill="#0b3b4a" opacity="0.45"/>
+      <circle r="146" fill="none" stroke="#22d3ee" stroke-opacity="0.16"/>
+      <circle r="110" fill="none" stroke="#22d3ee" stroke-opacity="0.18"/>
+      <circle r="74" fill="none" stroke="#22d3ee" stroke-opacity="0.21"/>
+      <circle r="38" fill="none" stroke="#22d3ee" stroke-opacity="0.24"/>
+      <path d="M-158 0 H158" stroke="#22d3ee" stroke-opacity="0.12" stroke-width="1"/>
+      <path d="M0 -158 V158" stroke="#22d3ee" stroke-opacity="0.12" stroke-width="1"/>
+      <circle r="146" fill="url(#sweep)"/>
+      <path d="M0 0 L146 0" stroke="#67e8f9" stroke-opacity="0.7" stroke-width="2"/>
+      <path d="M0 0 L103 -103" stroke="#67e8f9" stroke-opacity="0.35" stroke-width="1.5"/>
+
+      <!-- 命中点 -->
+      <circle cx="62" cy="-52" r="4" fill="#a3e635"/>
+      <circle cx="62" cy="-52" r="9" fill="none" stroke="#a3e635" stroke-opacity="0.45"/>
+      <circle cx="34" cy="70" r="3.2" fill="#67e8f9"/>
+      <circle cx="34" cy="70" r="7" fill="none" stroke="#67e8f9" stroke-opacity="0.4"/>
+      <circle cx="-78" cy="-24" r="3.5" fill="#5eead4"/>
+      <circle cx="-78" cy="-24" r="8" fill="none" stroke="#5eead4" stroke-opacity="0.35"/>
+      <circle cx="-40" cy="102" r="2.6" fill="#a3e635" opacity="0.85"/>
+      <circle cx="108" cy="30" r="2.6" fill="#67e8f9" opacity="0.8"/>
+      <circle cx="4" cy="-96" r="2.2" fill="#5eead4" opacity="0.7"/>
+    </g>
+
+    <rect width="1200" height="300" fill="url(#sky)" opacity="0.18"/>
+  </g>
+
+  <text x="64" y="94" font-family="'SF Mono',Menlo,Consolas,monospace" font-size="16"
+        letter-spacing="5.5" fill="#5eead4" opacity="0.95">DAILY SIGNAL · NOT NOISE</text>
+
+  <text x="62" y="168" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="62" font-weight="700" letter-spacing="-1.2" fill="#f0fdfa">AI Tech Radar</text>
+
+  <text x="64" y="209" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif"
+        font-size="22" fill="#a5f3fc">Agent 架构与自进化 · 推理成本 · 模型与评测的真实进展</text>
+
+  <g font-family="'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#e6fffb">
+    <rect x="64" y="236" width="112" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="81" y="259">41 issues</text>
+    <rect x="186" y="236" width="150" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="203" y="259">daily 09:00 CST</text>
+    <rect x="346" y="236" width="96" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="363" y="259">RSS</text>
+    <rect x="452" y="236" width="196" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="469" y="259">source-linked</text>
+  </g>
+</svg>

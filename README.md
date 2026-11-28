@@ -1,17 +1,27 @@
-# AI 技术雷达 · 每日日报
+<div align="center">
+  <img src="assets/header.svg" alt="AI Tech Radar" width="100%">
 
-[![在线浏览](https://img.shields.io/badge/demo-GitHub_Pages-0969da?style=flat-square)](https://whykathy.github.io/ai-tech-radar-daily/)
-[![更新频率](https://img.shields.io/github/commit-activity/m/WhyKathy/ai-tech-radar-daily?label=commits%2Fmonth&style=flat-square)](https://github.com/WhyKathy/ai-tech-radar-daily/commits/main)
-[![更新节奏](https://img.shields.io/badge/schedule-daily-2ea44f?style=flat-square)](ARCHIVE.md)
-[![RSS](https://img.shields.io/badge/RSS-feed.xml-orange?style=flat-square)](feed.xml)
-[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+  <p>
+    <a href="https://whykathy.github.io/ai-tech-radar-daily/"><img src="https://img.shields.io/badge/在线浏览-GitHub_Pages-0969da?style=for-the-badge&logo=githubpages&logoColor=white" alt="在线浏览"></a>
+    <a href="feed.xml"><img src="https://img.shields.io/badge/RSS-订阅-f97316?style=for-the-badge&logo=rss&logoColor=white" alt="RSS"></a>
+    <img src="https://img.shields.io/badge/节奏-每日_09%3A00_CST-2ea44f?style=for-the-badge" alt="节奏">
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge" alt="License"></a>
+  </p>
+
+  <p>
+    <a href="ARCHIVE.md"><img src="https://img.shields.io/badge/归档-41_期-334155?style=flat-square" alt="归档"></a>
+    <a href="https://github.com/WhyKathy/ai-tech-radar-daily/commits/main"><img src="https://img.shields.io/github/commit-activity/m/WhyKathy/ai-tech-radar-daily?label=commits%2Fmonth&style=flat-square&color=0ea5e9" alt="commits"></a>
+    <a href="https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose"><img src="https://img.shields.io/badge/反馈-开_Issue-8b5cf6?style=flat-square&logo=github" alt="反馈"></a>
+    <img src="https://img.shields.io/badge/每条-带来源链接-14b8a6?style=flat-square" alt="来源">
+  </p>
+</div>
 
 每天一份中文技术日报，聚焦 **Agent 架构与自进化、训练与推理方法、推理成本、模型与评测**的真实进展。只收改变了能力边界、单位成本或做法的信息；行业动态作为背景放在开篇，不单独成章。
 
 [在线浏览](https://whykathy.github.io/ai-tech-radar-daily/) · [浏览全部归档](ARCHIVE.md) · [RSS 订阅](feed.xml) · [收录口径与生成规范](PROMPT.md) · [反馈与纠错](https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose)
 
 <!-- latest:start -->
-## 最新一期
+## 📡 最新一期
 
 **[2026-11-28](daily/2026-11-28.md)** · 省 token 的三层杠杆在同一窗口内齐了：模型侧实证「让模型自己决定压缩什么」（32K 预算下分数近三倍、prefill 再省 15%），解码侧把草稿模型做成目标模型 KV 的零缓存寄生（Agent 场景最高 4.2×），编排侧把每次查询的花钱上限写进多智能体路由（同等精度省 82%）。
 
@@ -31,38 +41,50 @@
 [全部 41 期 →](ARCHIVE.md)
 <!-- latest:end -->
 
-## 收录口径
+## 🎯 收录口径
 
-一条技术信息要进雷达，必须至少满足一条：**改变能力边界**、**改变单位成本**、**改变做法**。
+一条技术信息要进雷达，必须至少满足一条：
 
-明确不收：纯榜单刷分、纯增量调参、无代码无细节的厂商博客、应用层产品发布、与技术路线无关的融资。
+| | 判据 | 意味着什么 |
+|:--:|------|-----------|
+| 🚀 | **改变能力边界** | 之前做不到的，现在能做到了 |
+| 💰 | **改变单位成本** | 同样效果，钱或时间降一个档 |
+| 🔧 | **改变做法** | 工程上该换个方式干了 |
+
+> [!WARNING]
+> **明确不收**：纯榜单刷分、纯增量调参、无代码无细节的厂商博客、应用层产品发布、与技术路线无关的融资。
 
 行业信息（融资与估值、数据中心与电力、诉讼与监管、平台对 agent 的准入）不单独成章，放在开篇「行业动态」，只陈述发生了什么以及它改变了什么，最多 4 条。
 
-## 每期结构
+## 🧱 每期结构
 
 每份 `daily/YYYY-MM-DD.md` 包含：今日一句话、行业动态、Agent 架构与工程、论文与方法、模型与开源、推理成本与基础设施、评测与基准、今日判断、覆盖与不确定，以及附录 · 今日索引（arXiv 新投稿 / Hugging Face trending / GitHub trending 的原始列表）。
 
-正文中某节当天没有达标内容就整节省略，不写占位、不凑数。**附录不受此限**——它是原始流，只列标题与链接，不做筛选与判断，用来扫读定位；判断只发生在正文。
+> [!NOTE]
+> 正文中某节当天没有达标内容就**整节省略**，不写占位、不凑数。**附录不受此限**——它是原始流，只列标题与链接，不做筛选与判断，用来扫读定位；判断只发生在正文。
 
-## 事实标准
+## ✅ 事实标准
 
-- 每条信息都带发布日期与来源链接。
-- 无法从检索结果确认的关键事实标注「待核实」，全文最多 2 条。
-- 只读标题、未读摘要的论文标注「仅标题，方法待核实」，不描述其方法。
-- 同一事件无实质新进展不重复收录；有进展写「更新：」并保留原日期。
+- 📅 每条信息都带发布日期与来源链接。
+- ⚠️ 无法从检索结果确认的关键事实标注「待核实」，全文最多 2 条。
+- 📄 只读标题、未读摘要的论文标注「仅标题，方法待核实」，不描述其方法。
+- 🔁 同一事件无实质新进展不重复收录；有进展写「更新：」并保留原日期。
 
-## 更新机制
+## ⚙️ 更新机制
 
 - 每天 09:00（CST）由定时任务检索过去 48 小时的进展，按 [`PROMPT.md`](PROMPT.md) 生成 `daily/YYYY-MM-DD.md`。
 - 发布前 [`scripts/build_index.py`](scripts/build_index.py) 从全部日报派生 `ARCHIVE.md`、`feed.xml`、本页的「最新一期」与 `index.html`；[`scripts/check_report.py`](scripts/check_report.py) 检查章节、来源链接、待核实数量与公开文风。
 - 在线浏览页首屏直接内嵌**最新一期全文**与「今日速览」，无需点开 md；左侧选日期可切换往期。
 - 手动重建门面：`python3 scripts/build_index.py`；手动质检：`python3 scripts/check_report.py 2026-11-28`。
 
-## 反馈
+## 💬 反馈
 
 发现事实错误、失效链接，或想推荐值得收录的源，请[开一个 Issue](https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose)。日报由 AI 辅助检索整理，关键结论请结合原文阅读。
 
-## License
+## 📄 License
 
 [MIT](LICENSE)
+
+<div align="center">
+  <sub>每日扫描 · 只报改变边界、成本或做法的信号</sub>
+</div>
