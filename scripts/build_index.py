@@ -120,7 +120,130 @@ def write_feed(reports: list[dict]) -> None:
     (ROOT / "feed.xml").write_text("\n".join(lines), encoding="utf-8")
 
 
-def update_readme(reports: list[dict]) -> None:
+def extract_judgments(text: str) -> list[str]:
+    body = text.split("## 附录 · 今日索引")[0]
+    match = re.search(r"^##\s+今日判断\s*$\n(.*?)(?=^##\s|\Z)", body, re.M | re.S)
+    if not match:
+        return []
+    items = re.findall(r"^\d+\.\s+(.+)$", match.group(1), re.M)
+    return [re.sub(r"\s+", " ", item).strip() for item in items[:3]]
+
+
+def inline_md(text: str) -> str:
+    value = html.escape(text, quote=False)
+    value = re.sub(r"`([^`]+)`", r"<code>\1</code>", value)
+    value = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', value)
+    value = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", value)
+    return value
+
+
+def md_to_html(md: str) -> str:
+    """把日报 Markdown 渲染成静态 HTML；只覆盖日报实际用到的语法子集。"""
+    out: list[str] = []
+    para: list[str] = []
+    list_type: str | None = None
+
+    def flush_para() -> None:
+        if para:
+            out.append("<p>" + "<br>".join(inline_md(p) for p in para) + "</p>")
+            para.clear()
+
+    def close_list() -> None:
+        nonlocal list_type
+        if list_type:
+            out.append(f"</{list_type}>")
+            list_type = None
+
+    for raw in md.splitlines():
+        line = raw.strip()
+        if not line:
+            flush_para()
+            close_list()
+            continue
+        if re.fullmatch(r"-{3,}", line):
+            flush_para()
+            close_list()
+            out.append("<hr>")
+            continue
+        heading = re.match(r"^(#{1,6})\s+(.*)$", line)
+        if heading:
+            flush_para()
+            close_list()
+            level = len(heading.group(1))
+            out.append(f"<h{level}>{inline_md(heading.group(2))}</h{level}>")
+            continue
+        if line.startswith(">"):
+            flush_para()
+            close_list()
+            out.append(f"<blockquote>{inline_md(line[1:].strip())}</blockquote>")
+            continue
+        unordered = re.match(r"^[-*]\s+(.*)$", line)
+        ordered = re.match(r"^\d+\.\s+(.*)$", line)
+        if unordered or ordered:
+            flush_para()
+            kind = "ul" if unordered else "ol"
+            if list_type != kind:
+                close_list()
+                out.append(f"<{kind}>")
+                list_type = kind
+            out.append(f"<li>{inline_md((unordered or ordered).group(1))}</li>")
+            continue
+        if list_type and re.match(r"^\s{2,}\S", raw) and out and out[-1].startswith("<li>"):
+            out[-1] = out[-1][:-5] + "<br>" + inline_md(line) + "</li>"
+            continue
+        flush_para()
+        close_list()
+        para.append(line)
+    flush_para()
+    close_list()
+    return "\n".join(out)
+
+
+def brief_html(report: dict, text: str) -> str:
+    parts = [f"<h2>{report['date']} · 今日速览</h2>"]
+    if report["one_liner"] and not report["one_liner"].startswith("（"):
+        parts.append(f"<p>{inline_md(report['one_liner'])}</p>")
+    judgments = extract_judgments(text)
+    if judgments:
+        parts.append(
+            "<ol>" + "".join(f"<li>{inline_md(j)}</li>" for j in judgments) + "</ol>"
+        )
+    return "".join(parts)
+
+
+def replace_region(text: str, start: str, end: str, block: str) -> str:
+    if start not in text or end not in text:
+        raise SystemExit(f"index.html 缺少标记块：{start} / {end}")
+    head, rest = text.split(start, 1)
+    _, tail = rest.split(end, 1)
+    return f"{head}{start}{block}{end}{tail}"
+
+
+def update_index(reports: list[dict], text: str) -> None:
+    path = ROOT / "index.html"
+    page = path.read_text(encoding="utf-8")
+    latest = reports[-1]
+
+    nav: list[str] = []
+    by_month: dict[str, list[dict]] = {}
+    for report in reversed(reports):
+        by_month.setdefault(report["date"][:7], []).append(report)
+    for month, items in by_month.items():
+        year, mon = month.split("-")
+        nav.append(f"<h2>{year} 年 {int(mon)} 月（{len(items)}）</h2>")
+        for item in items:
+            title = html.escape(item["one_liner"], quote=True)
+            nav.append(
+                f'<a href="#{item["date"]}" data-date="{item["date"]}" '
+                f'title="{title}">{item["date"]}</a>'
+            )
+    page = replace_region(page, "<!-- archive:start -->", "<!-- archive:end -->", "".join(nav))
+    page = replace_region(page, "<!-- brief:start -->", "<!-- brief:end -->", brief_html(latest, text))
+    page = replace_region(page, "<!-- report:start -->", "<!-- report:end -->", md_to_html(text))
+    path.write_text(page, encoding="utf-8")
+
+
+def update_readme(reports: list[dict], latest_text: str) -> None:
     path = ROOT / "README.md"
     text = path.read_text(encoding="utf-8")
     start, end = TODAY_MARKERS
@@ -133,6 +256,12 @@ def update_readme(reports: list[dict]) -> None:
         lines.append(
             f"**[{newest['date']}]({newest['rel']})** · {newest['one_liner']}"
         )
+        lines.append("")
+        lines.append("**今日判断**")
+        lines.append("")
+        for index, judgment in enumerate(extract_judgments(latest_text)[:3], 1):
+            short = judgment if len(judgment) <= 160 else judgment[:160] + "…"
+            lines.append(f"{index}. {short}")
         lines.append("")
         lines.append("近期：")
         lines.append("")
@@ -153,12 +282,14 @@ def main() -> int:
     reports = load_reports()
     if not reports:
         raise SystemExit("未找到 YYYY-MM-DD.md 日报")
+    latest_text = (ROOT / reports[-1]["rel"]).read_text(encoding="utf-8")
     write_archive(reports)
     write_feed(reports)
-    update_readme(reports)
+    update_readme(reports, latest_text)
+    update_index(reports, latest_text)
     print(
-        f"built: ARCHIVE.md ({len(reports)} 期), feed.xml, README 最新一期 "
-        f"({reports[-1]['date']})"
+        f"built: ARCHIVE.md ({len(reports)} 期), feed.xml, README 最新一期, "
+        f"index.html 内嵌全文 ({reports[-1]['date']})"
     )
     return 0
 
