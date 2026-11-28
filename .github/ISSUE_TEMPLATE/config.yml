@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 日报全文与归档
+    url: https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/ARCHIVE.md
+    about: 先在这里找到相关期次，再提交纠错或线索。

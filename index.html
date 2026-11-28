@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术雷达 · 每日日报</title>
+<style>
+  :root { --fg:#1f2328; --muted:#59636e; --line:#d8dee4; --bg:#ffffff; --soft:#f6f8fa; --accent:#0969da; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+  header { padding:28px 32px 20px; border-bottom:1px solid var(--line); }
+  h1 { margin:0 0 6px; font-size:26px; letter-spacing:.2px; }
+  header p { margin:0; color:var(--muted); }
+  nav { margin-top:14px; display:flex; flex-wrap:wrap; gap:16px; }
+  nav a { color:var(--accent); text-decoration:none; font-size:14px; }
+  nav a:hover { text-decoration:underline; }
+  main { display:grid; grid-template-columns:290px minmax(0,1fr); gap:32px; padding:28px 32px 60px; max-width:1500px; margin:0 auto; }
+  aside { border-right:1px solid var(--line); padding-right:20px; max-height:calc(100vh - 90px); overflow:auto; position:sticky; top:20px; }
+  aside h2 { font-size:14px; color:var(--muted); margin:18px 0 8px; font-weight:600; }
+  aside h2:first-child { margin-top:0; }
+  aside a { display:block; padding:4px 8px; margin:2px -8px; border-radius:6px; color:var(--fg); text-decoration:none; font-size:14px; }
+  aside a:hover { background:var(--soft); }
+  aside a.active { background:var(--soft); color:var(--accent); font-weight:600; }
+  article { min-width:0; }
+  article h1 { font-size:24px; margin:0 0 20px; }
+  article h2 { font-size:19px; margin:30px 0 12px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+  article h3 { font-size:16px; margin:22px 0 8px; }
+  article a { color:var(--accent); }
+  article blockquote { margin:16px 0; padding:8px 16px; border-left:4px solid var(--line); background:var(--soft); color:var(--muted); }
+  article li { margin:6px 0; }
+  .loading { color:var(--muted); }
+  @media (max-width:860px) { main { grid-template-columns:1fr; padding:20px; } aside { position:static; max-height:280px; border-right:0; border-bottom:1px solid var(--line); padding:0 0 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>AI 技术雷达 · 每日日报</h1>
+  <p>聚焦 Agent 架构与自进化、训练与推理方法、推理成本、模型与评测的真实进展。</p>
+  <nav>
+    <a href="ARCHIVE.md">归档索引</a>
+    <a href="README.md">收录口径</a>
+    <a href="feed.xml">RSS</a>
+    <a href="https://github.com/WhyKathy/ai-tech-radar-daily">GitHub</a>
+  </nav>
+</header>
+<main>
+  <aside id="archive"><div class="loading">加载归档…</div></aside>
+  <article id="report"><div class="loading">加载最新一期…</div></article>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+const archive = document.getElementById('archive');
+const report = document.getElementById('report');
+
+function renderMarkdown(text) {
+  if (window.marked) return window.marked.parse(text);
+  return '<pre style="white-space:pre-wrap">' + text.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])) + '</pre>';
+}
+
+function loadReport(date, link) {
+  document.querySelectorAll('#archive a').forEach(a => a.classList.toggle('active', a === link));
+  report.innerHTML = '<div class="loading">加载 ' + date + '…</div>';
+  fetch(date + '.md').then(r => r.text()).then(text => {
+    report.innerHTML = renderMarkdown(text);
+    document.title = 'AI 技术雷达 · ' + date;
+    window.location.hash = date;
+  }).catch(() => { report.innerHTML = '<p>加载失败，请<a href="' + date + '.md">打开原文</a>。</p>'; });
+}
+
+fetch('ARCHIVE.md').then(r => r.text()).then(md => {
+  const groups = [];
+  let current = null;
+  for (const line of md.split('\n')) {
+    const h = line.match(/^##\s+(\d{4} 年 \d+ 月)/);
+    if (h) { current = { title: h[1], items: [] }; groups.push(current); continue; }
+    const item = line.match(/^- \*\*\[(\d{4}-\d{2}-\d{2})\]\(([^)]+)\)\*\*\s*—\s*(.*)$/);
+    if (item && current) current.items.push({ date: item[1], file: item[2], summary: item[3] });
+  }
+  const all = groups.flatMap(g => g.items);
+  if (!all.length) { archive.innerHTML = '<p>归档为空，请先运行 scripts/build_index.py</p>'; return; }
+  archive.innerHTML = groups.map(g =>
+    '<h2>' + g.title + '（' + g.items.length + '）</h2>' +
+    g.items.map(i => '<a href="#" data-date="' + i.date + '" data-file="' + i.file + '" title="' + i.summary.replace(/"/g, '&quot;') + '">' + i.date + '</a>').join('')
+  ).join('');
+  archive.querySelectorAll('a').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault(); loadReport(a.dataset.date, a);
+  }));
+  const initial = all.find(i => i.date === location.hash.slice(1)) || all[0];
+  const first = archive.querySelector('[data-date="' + initial.date + '"]');
+  loadReport(initial.date, first);
+}).catch(() => { archive.innerHTML = '<p>归档加载失败，请<a href="ARCHIVE.md">直接查看</a>。</p>'; });
+</script>
+</body>
+</html>
