@@ -1,5 +1,6 @@
 # AI 技术雷达 · 每日日报
 
+[![在线浏览](https://img.shields.io/badge/demo-GitHub_Pages-0969da?style=flat-square)](https://whykathy.github.io/ai-tech-radar-daily/)
 [![更新频率](https://img.shields.io/github/commit-activity/m/WhyKathy/ai-tech-radar-daily?label=commits%2Fmonth&style=flat-square)](https://github.com/WhyKathy/ai-tech-radar-daily/commits/main)
 [![更新节奏](https://img.shields.io/badge/schedule-daily-2ea44f?style=flat-square)](ARCHIVE.md)
 [![RSS](https://img.shields.io/badge/RSS-feed.xml-orange?style=flat-square)](feed.xml)
@@ -7,7 +8,7 @@
 
 每天一份中文技术日报，聚焦 **Agent 架构与自进化、训练与推理方法、推理成本、模型与评测**的真实进展。只收改变了能力边界、单位成本或做法的信息；行业动态作为背景放在开篇，不单独成章。
 
-[浏览全部归档](ARCHIVE.md) · [RSS 订阅](feed.xml) · [收录口径与生成规范](PROMPT.md) · [反馈与纠错](https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose)
+[在线浏览](https://whykathy.github.io/ai-tech-radar-daily/) · [浏览全部归档](ARCHIVE.md) · [RSS 订阅](feed.xml) · [收录口径与生成规范](PROMPT.md) · [反馈与纠错](https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose)
 
 <!-- latest:start -->
 ## 最新一期
