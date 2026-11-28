@@ -9,10 +9,10 @@
   </p>
 
   <p>
-    <a href="ARCHIVE.md"><img src="https://img.shields.io/badge/归档-41_期-334155?style=flat-square" alt="归档"></a>
+    <a href="ARCHIVE.md"><img src="https://img.shields.io/badge/归档-ARCHIVE-334155?style=flat-square" alt="归档"></a>
     <a href="https://github.com/WhyKathy/ai-tech-radar-daily/commits/main"><img src="https://img.shields.io/github/commit-activity/m/WhyKathy/ai-tech-radar-daily?label=commits%2Fmonth&style=flat-square&color=0ea5e9" alt="commits"></a>
     <a href="https://github.com/WhyKathy/ai-tech-radar-daily/issues/new/choose"><img src="https://img.shields.io/badge/反馈-开_Issue-8b5cf6?style=flat-square&logo=github" alt="反馈"></a>
-    <img src="https://img.shields.io/badge/每条-带来源链接-14b8a6?style=flat-square" alt="来源">
+    <img src="https://img.shields.io/badge/待核实-全文≤2_条-eab308?style=flat-square" alt="待核实">
   </p>
 </div>
 

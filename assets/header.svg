@@ -66,11 +66,11 @@
   <g font-family="'SF Mono',Menlo,Consolas,monospace" font-size="15" fill="#e6fffb">
     <rect x="64" y="236" width="112" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
     <text x="81" y="259">41 issues</text>
-    <rect x="186" y="236" width="150" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
-    <text x="203" y="259">daily 09:00 CST</text>
-    <rect x="346" y="236" width="96" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
-    <text x="363" y="259">RSS</text>
-    <rect x="452" y="236" width="196" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
-    <text x="469" y="259">source-linked</text>
+    <rect x="186" y="236" width="130" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="203" y="259">8 sections</text>
+    <rect x="326" y="236" width="80" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="343" y="259">中文</text>
+    <rect x="416" y="236" width="196" height="34" rx="17" fill="url(#chip)" stroke="#5eead4" stroke-opacity="0.32"/>
+    <text x="433" y="259">source-linked</text>
   </g>
 </svg>
