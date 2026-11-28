@@ -60,11 +60,11 @@ function renderMarkdown(text) {
 function loadReport(date, link) {
   document.querySelectorAll('#archive a').forEach(a => a.classList.toggle('active', a === link));
   report.innerHTML = '<div class="loading">加载 ' + date + '…</div>';
-  fetch(date + '.md').then(r => r.text()).then(text => {
+  fetch('daily/' + date + '.md').then(r => r.text()).then(text => {
     report.innerHTML = renderMarkdown(text);
     document.title = 'AI 技术雷达 · ' + date;
     window.location.hash = date;
-  }).catch(() => { report.innerHTML = '<p>加载失败，请<a href="' + date + '.md">打开原文</a>。</p>'; });
+  }).catch(() => { report.innerHTML = '<p>加载失败，请<a href="daily/' + date + '.md">打开原文</a>。</p>'; });
 }
 
 fetch('ARCHIVE.md').then(r => r.text()).then(md => {

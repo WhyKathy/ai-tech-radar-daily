@@ -17,9 +17,25 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 TODAY_MARKERS = ("<!-- latest:start -->", "<!-- latest:end -->")
 
 
+def ingest_root_reports() -> int:
+    """兼容旧路径：定时任务若仍把日报写在根目录，自动收进 daily/。"""
+    daily = ROOT / "daily"
+    if not daily.exists():
+        daily.mkdir()
+    moved = 0
+    for path in sorted(ROOT.glob("????-??-??.md")):
+        if not DATE_RE.match(path.stem):
+            continue
+        target = daily / path.name
+        if not target.exists():
+            path.replace(target)
+            moved += 1
+    return moved
+
+
 def load_reports() -> list[dict]:
     reports = []
-    for path in sorted(ROOT.glob("????-??-??.md")):
+    for path in sorted((ROOT / "daily").glob("????-??-??.md")):
         if not DATE_RE.match(path.stem):
             continue
         text = path.read_text(encoding="utf-8")
@@ -36,7 +52,7 @@ def load_reports() -> list[dict]:
         reports.append(
             {
                 "date": path.stem,
-                "path": path,
+                "rel": f"daily/{path.name}",
                 "one_liner": one_liner or "（今日一句话缺失）",
                 "links": len(re.findall(r"https?://", body)),
                 "pending": body.count("待核实"),
@@ -63,7 +79,7 @@ def write_archive(reports: list[dict]) -> None:
         lines.append("")
         for item in items:
             lines.append(
-                f"- **[{item['date']}]({item['date']}.md)** — {item['one_liner']}"
+                f"- **[{item['date']}]({item['rel']})** — {item['one_liner']}"
             )
         lines.append("")
     (ROOT / "ARCHIVE.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
@@ -88,7 +104,7 @@ def write_feed(reports: list[dict]) -> None:
         day = datetime.strptime(item["date"], "%Y-%m-%d").replace(
             tzinfo=timezone(timedelta(hours=8))
         )
-        link = f"{REPO_URL}/blob/main/{item['date']}.md"
+        link = f"{REPO_URL}/blob/main/{item['rel']}"
         lines.extend(
             [
                 "    <item>",
@@ -115,13 +131,13 @@ def update_readme(reports: list[dict]) -> None:
     if latest:
         newest = latest[0]
         lines.append(
-            f"**[{newest['date']}]({newest['date']}.md)** · {newest['one_liner']}"
+            f"**[{newest['date']}]({newest['rel']})** · {newest['one_liner']}"
         )
         lines.append("")
         lines.append("近期：")
         lines.append("")
         for item in latest[1:]:
-            lines.append(f"- [{item['date']}]({item['date']}.md) — {item['one_liner']}")
+            lines.append(f"- [{item['date']}]({item['rel']}) — {item['one_liner']}")
         lines.append("")
         lines.append(f"[全部 {len(reports)} 期 →](ARCHIVE.md)")
     block = "\n".join(lines).rstrip()
@@ -131,6 +147,9 @@ def update_readme(reports: list[dict]) -> None:
 
 
 def main() -> int:
+    moved = ingest_root_reports()
+    if moved:
+        print(f"ingested: {moved} 份根目录日报已移入 daily/")
     reports = load_reports()
     if not reports:
         raise SystemExit("未找到 YYYY-MM-DD.md 日报")

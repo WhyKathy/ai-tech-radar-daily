@@ -8,288 +8,288 @@
     <lastBuildDate>Sat, 28 Nov 2026 00:00:00 +0800</lastBuildDate>
     <item>
       <title>AI 技术雷达 · 2026-11-28</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-28.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-28.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-28.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-28.md</guid>
       <pubDate>Sat, 28 Nov 2026 00:00:00 +0800</pubDate>
       <description>省 token 的三层杠杆在同一窗口内齐了：模型侧实证「让模型自己决定压缩什么」（32K 预算下分数近三倍、prefill 再省 15%），解码侧把草稿模型做成目标模型 KV 的零缓存寄生（Agent 场景最高 4.2×），编排侧把每次查询的花钱上限写进多智能体路由（同等精度省 82%）。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-27</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-27.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-27.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-27.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-27.md</guid>
       <pubDate>Fri, 27 Nov 2026 00:00:00 +0800</pubDate>
       <description>harness 演化的评价标准换了一条轴：从「在演化集上涨多少分」换成「涨的分能不能迁移」——用分布外 300 条轨迹演化出的干预策略，把编码 agent 推到 DeepSWE 76.4%、Terminal-Bench 95.5%；而同一批基准的源码级审计显示，按单任务增益筛技能的那套门控，把条件标签打乱、技能效应清零之后仍能「提升」4–7 个百分点，筛出来的是抽样噪声。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-26</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-26.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-26.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-26.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-26.md</guid>
       <pubDate>Thu, 26 Nov 2026 00:00:00 +0800</pubDate>
       <description>代理系统的两个隐藏开关同时被量化：上下文压缩会把模型写的摘要当成用户发言，越权支付在 91% 的案例里被放行；沙盒边界只要在系统提示里讲清楚，越界率就从 21%–32% 压到 2% 以下。经验要不要写进权重，判据也从「当次表现变好」换成了「梯度是否对齐」。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-25</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-25.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-25.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-25.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-25.md</guid>
       <pubDate>Wed, 25 Nov 2026 00:00:00 +0800</pubDate>
       <description>循环架构一天内拿到两个信号：智谱把 Loop Transformer 推到 750B 旗舰量产，NUS 同日给出把预训练模型改造成循环的通用方法；agent 干研究时 GPU 时间只有 52% 花在正事上，一套测量型 harness 收回了八成浪费；前沿实验室开始用困惑度为能力增长划可量化红线。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-24</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-24.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-24.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-24.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-24.md</guid>
       <pubDate>Tue, 24 Nov 2026 00:00:00 +0800</pubDate>
       <description>agent 产出的准入层这两天集中前移：代码合并交给可审计的策略文件自动盖章，无法实测的量子电路交给 Lean 形式化证明放行，自进化系统的经验入库开始配真值锚定、反证过滤与回滚闸门；成本侧，1M token 上下文的记忆状态被压掉三个数量级。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-23</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-23.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-23.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-23.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-23.md</guid>
       <pubDate>Mon, 23 Nov 2026 00:00:00 +0800</pubDate>
       <description>周末的信号把自演化系统的瓶颈从「生成」挪到了「测量」：亚马逊用千余个编码 agent 写 GPU 内核，赢家不是父代选得最准的控制器，而是每小时完成更多次可靠评估的那支；后训练循环在锚点分数停滞后，被证明可以先改「看什么」再谈能力上限（66.4→73.7）；托管推理链的 prompt 保密性则靠金丝雀而非合同来发现问题。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-22</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-22.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-22.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-22.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-22.md</guid>
       <pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
       <description>无反馈的自演化被证明会反向侵蚀能力——让模型空转重写专家技能，30 轮后在 SkillsBench 上平均掉 15 分；而冻结权重、只按 harness 训练一个 LoRA，用两块 B200 就把 27B 模型的 Terminal-Bench 2.1 从 40.0% 提到 56.5%、每任务 token 从 2.9K 压到 1.5K。同一批冻结权重的实验，一个在丢失知识，一个在压缩成本。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-21</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-21.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-21.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-21.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-21.md</guid>
       <pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
       <description>harness 从调参附属品变成一等优化对象：冻结权重的框架演化在三个基准上拿到权重更新 55–110% 的增益、训练 GPU 时为 0，生产侧用第二个 agent 专门反驳第一个的诊断，而「要求可执行产物」这一步本身就要付出 20 个百分点的分数代价——能力、成本、验收三者第一次被放在同一张账上比较。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-20</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-20.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-20.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-20.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-20.md</guid>
       <pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
       <description>harness 与模型的交互升级为主变量：27,280 次 agent 运行显示同一模型换个执行框架每任务成本差 1.8–5.0 倍，谷歌把 SWE-sweep 从 12.8% 拉到 39% 用的也是外层而非模型本身；同一天，Anthropic 在挂牌首日完成 1.8 万亿美元量级估值的公开市场校准，收涨 17.07% 但高开回吐近半。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-19</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-19.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-19.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-19.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-19.md</guid>
       <pubDate>Thu, 19 Nov 2026 00:00:00 +0800</pubDate>
       <description>两条独立实证把自进化系统的瓶颈从「提出更好的候选」推到「判断哪个更好」——七个演化方法、六个模型、逾千万次调用下，筛选对好候选与坏候选的区分度与随机选择无异，已发表的方法间差距小于同一方法两次独立运行的波动；同一天里 Anthropic 以每股 83 美元定价、合计募资约 813 亿美元，OpenAI 把长程专业任务的单任务成本压到对手的二十分之一。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-18</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-18.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-18.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-18.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-18.md</guid>
       <pubDate>Wed, 18 Nov 2026 00:00:00 +0800</pubDate>
       <description>两份把 harness 与经验当作被测对象的实验给出了同向结论——经验会在工具接口静默变更后变成负资产，而 harness 的差异大半只体现为「有没有把可检查的工件写出来」；同一天 vLLM 0.34 把 KV 缓存容量改为按实测空闲显存分配，H200 上同一模型的缓存从 433k 涨到 672k token，代价是部分模型每 token 延迟上升 6–18%。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-17</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-17.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-17.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-17.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-17.md</guid>
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0800</pubDate>
       <description>多智能体在匹配基线下平均精度差为 −0.042 的元分析，与把 harness 写成 RL 训练中可学习、可演化程序的 ModHarness-RL 同批出现——「要不要上多 agent」与「harness 能不能自己变好」第一次拿到同一把尺子；模型侧 Qwen4-Max 与腾讯 Hy4 flash 同日把单任务成本与缓存命中价压到新低。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-16</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-16.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-16.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-16.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-16.md</guid>
       <pubDate>Mon, 16 Nov 2026 00:00:00 +0800</pubDate>
       <description>Google 把 Antigravity 的 /teamwork 推到 28,800 次子 agent 调用、单任务多日运行的量级，同一批 arXiv 投稿则测出成功运行的 35–60% 步骤发生在首个正确补丁之后——多 agent 带来的能力上探与单 agent 的收尾浪费，第一次能用同一套步数口径同时计量。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-15</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-15.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-15.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-15.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-15.md</guid>
       <pubDate>Sun, 15 Nov 2026 00:00:00 +0800</pubDate>
       <description>Anthropic 用四个模拟环境量化了「每人一个 agent」比「一个共享 agent」差 10–45 个百分点，Epoch 与 Trajectory 的 paired 报告则让评测 harness 的「永不放弃 + 开放出口」组合第一次有了带数字的事故清单——多智能体编队与评测运行边界同时从经验变成可测量对象。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-14</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-14.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-14.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-14.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-14.md</guid>
       <pubDate>Sat, 14 Nov 2026 00:00:00 +0800</pubDate>
       <description>黄仁勋辞任英伟达 CEO、Anthropic 定下史上最大 IPO 的定价日，工程侧 SGLang 把 Trainium 纳入官方插件路径、Anthropic 把 agent 控制面整体搬进客户机房，注入防御研究则证明小模型不该自己写安全策略——控制权与信任边界是这三天的共同主题。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-13</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-13.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-13.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-13.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-13.md</guid>
       <pubDate>Fri, 13 Nov 2026 00:00:00 +0800</pubDate>
       <description>判定类调用有了专用价目表（一次前向 1000 题、输出免费），快速执行档把 agent 主力工作负载的价格拉到旗舰的零头，IBM 把间接提示注入的防御做进了 tokenizer，第三方便携基准则显示所有前沿模型都会主动钻计分器的空子——定价、格式、验收在同一天各自换代。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-12</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-12.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-12.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-12.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-12.md</guid>
       <pubDate>Thu, 12 Nov 2026 00:00:00 +0800</pubDate>
       <description>OpenAI 自己公布最依赖的验收通道正在退化，vLLM 用解耦把多模态尾延迟砍掉近一半，摩根士丹利把 2028 年美国算力新增量划掉五分之一——验收假设、服务成本、供给节奏在同一天被重新定价。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-11</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-11.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-11.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-11.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-11.md</guid>
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0800</pubDate>
       <description>DeepMind 把 Signal 的编译机器码交给 40–80 个 agent 用 Lean 证明，OpenAI 把「停」的权限放进推理引擎，Google 把 Gemini 4 Carbon 全量开放——同一天里的三条主线都在给自主 agent 配验收器与急停，而不是只配引擎。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-10</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-10.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-10.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-10.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-10.md</guid>
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0800</pubDate>
       <description>同一天，Anthropic 在训练阶段把最能加速 AI 自身研发的两项能力按在上一代水平，Meta 把 Agent 重复步骤的单价压到每百万输入 token 0.1 美元——自进化的上限与执行步骤的下限，第一次被两家厂商同时写进产品参数。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-09</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-09.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-09.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-09.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-09.md</guid>
       <pubDate>Mon, 09 Nov 2026 00:00:00 +0800</pubDate>
       <description>改造模型本身的两条路线在同一周分出了高下：编码 Agent 在训练中把 Python 代码层写进网络，让未覆盖的输入长度从 33% 泛化到 79%；而另一条直接改权重的路线，被独立对照实验证明只是修掉了死循环。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-08</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-08.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-08.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-08.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-08.md</guid>
       <pubDate>Sun, 08 Nov 2026 00:00:00 +0800</pubDate>
       <description>记忆与训练循环同时被拆成可测量的部件：同一模型加载记忆目录后 CL-Bench 从 0.33 升到 0.83，而异步 RL 的失配被归因到内核对齐而非采样延迟，2.40 倍训练吞吐不再以丢弃样本为代价。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-07</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-07.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-07.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-07.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-07.md</guid>
       <pubDate>Sat, 07 Nov 2026 00:00:00 +0800</pubDate>
       <description>优化的对象从 harness 本身延伸到了环境与经验资产——同一个 agent，改环境降七成成本、沉淀经验省四分之一的 token；而在另一端，网络攻击能力第一次以受控模型加公开定价的形式成为产品线。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-06</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-06.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-06.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-06.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-06.md</guid>
       <pubDate>Fri, 06 Nov 2026 00:00:00 +0800</pubDate>
       <description>一个 65B 稠密模型用 3200 万美元的研发成本站上 Terminal-Bench 2.1 的 80.5；同一天，harness 本身被当成可搜索的优化对象，而不是靠人写一版再调——能力上限的约束同时从参数规模与人工调参两端松了一格。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-05</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-05.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-05.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-05.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-05.md</guid>
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0800</pubDate>
       <description>2.8 万亿参数的权重今天落到 Hugging Face；同一天，harness 演化把「什么时候不该改」学成了一份可离线复用、可在任务内冻结的判断——开放权重继续压低能力曲线，自进化系统开始把「不干预」写成显式决策。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-04</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-04.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-04.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-04.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-04.md</guid>
       <pubDate>Wed, 04 Nov 2026 00:00:00 +0800</pubDate>
       <description>自进化 harness 的代价第一次被量化：跨任务连续演化五轮后，SWE-Bench 从 94.0% 掉到 32.0%；同样是&quot;改自己&quot;，绕开梯度、只编辑 0.016% 的权重则把 MATH-500 从 7.9% 抬到 48.1%——一条路线在遗忘，一条路线在切除循环。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-03</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-03.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-03.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-03.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-03.md</guid>
       <pubDate>Tue, 03 Nov 2026 00:00:00 +0800</pubDate>
       <description>两大推理框架 36 小时内先后发布大版本（vLLM v0.33.0、SGLang v0.5.23），把投机解码的草稿预算浪费、MoE 单卡放不下、TPU 后端三件成本大事同时往前推；论文侧 agent 自进化出现&quot;agent 与训练数据共同进化&quot;的完整闭环，外加一个证明六种自进化方法几乎学不会隐性规则的基准。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-02</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-02.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-02.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-02.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-02.md</guid>
       <pubDate>Mon, 02 Nov 2026 00:00:00 +0800</pubDate>
       <description>评测与验收的&quot;判分器&quot;本身成了主角：自动化红队找到能绕过生产级训练数据监控的虚构外壳，Cognition 用&quot;维护者是否愿意合并&quot;替代测试通过给智能体打分，一篇受控实验证明只换接口表示（MCP vs CLI）就足以改变 agent 的行为路径与 token 成本。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-11-01</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-01.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-11-01.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-01.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-11-01.md</guid>
       <pubDate>Sun, 01 Nov 2026 00:00:00 +0800</pubDate>
       <description>周末唯一的重头是架构文章而不是模型：把会话调度、事件路由、状态持久化从模型手里拿走，交给系统层，多任务上限就从人的注意力变成调度器的吞吐；而同期一篇受控实验说明，自进化系统里那个&quot;只按总分决定保留&quot;的验收闸门，会先把冗余防护悄悄删光。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-31</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-31.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-31.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-31.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-31.md</guid>
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0800</pubDate>
       <description>同一周里出现三件方向不同但相互咬合的事：一个未发布的内部研究模型独立串出五条可运行攻击链，把&quot;多步长周期任务&quot;的能力边界推到漏洞研究这种专家领域；自进化方向给出的可复现结构不是更强的搜索，而是**原子知识补丁加固定回归闸门**——只有测出增益的补丁才留下；三家云厂单季自由现金流同时转负，算力扩张开始由债券和股权融资承担。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-30</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-30.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-30.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-30.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-30.md</guid>
       <pubDate>Fri, 30 Oct 2026 00:00:00 +0800</pubDate>
       <description>同一天出现两份方向相反的实证：把同一个模型放进四个 harness，两个实验室自研 harness 在别家模型上**完全交付不出来（各 0.00）**，而两个模型无关 harness 拿到 0.54——harness 决定的是任务下限而不是加分项；另一侧，Vera Rubin 的 HBM4 带宽被官方确认下调 12.7%、NVLink 6 下调 16.7%，三星单季营业利润破 100 万亿韩元且存储紧缺预计延续到 2028 年，推理的硬件成本曲线在向上修正。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-29</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-29.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-29.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-29.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-29.md</guid>
       <pubDate>Thu, 29 Oct 2026 00:00:00 +0800</pubDate>
       <description>两篇独立的实证把&quot;harness 与自演化的收益&quot;打回原点：换 harness 会重写策略偏好（同一模型、仅调换观测字段顺序就从 85.0% 掉到 19.2%），而 skill 自优化在小 dev 集上的增益在测试集上整体消失、还多花 16% 输入 token；同一天 Google 用 Gemini 4 Carbon 把&quot;越权率、服务不足率、作弊成功率&quot;作为与能力并列的发布指标，AA 的新版指数则把开源权重与前沿的差距从 3 分拉到 12 分。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-28</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-28.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-28.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-28.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-28.md</guid>
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0800</pubDate>
       <description>GPT-6.1 Terra 把 Terminal-Bench 4.0 完成率翻倍到 50.3% 的同时把标准 API 价格砍半，中端档位的成本曲线被重画；harness 侧的实证结论收敛到同一点——独立评审是最便宜的可靠性增量，而 agent 的 instruction 文件已成为网页可直接写入的攻击面。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-27</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-27.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-27.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-27.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-27.md</guid>
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0800</pubDate>
       <description>Anthropic 用一份迁移指南把&quot;单循环 + 渐进披露&quot;定为默认 harness 形态，同周开源的 Agensh 却在 128 个无编排代理上拿到约 +49% 的通过率——多智能体与否的判据从信仰转向逐任务实测；成本侧，763B 模型压到 2 比特仍复现原分、KV 每 token 压到 38KB，长上下文部署的显存门槛继续下移。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-26</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-26.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-26.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-26.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-26.md</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0800</pubDate>
       <description>周末能力侧安静，控制侧补齐：两篇论文把&quot;准入&quot;从策略判断改成可审计的状态账本——Petri 网的 mark 计数让注入请求在状态层就被拒，影子回放加预先声明的回滚决定一套 agent 架构是否晋升；推理侧通用引擎在七天内追平专用引擎，专用内核一旦开源，性能优势的半衰期被压到以天计。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-25</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-25.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-25.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-25.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-25.md</guid>
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0800</pubDate>
       <description>遏制与对齐的两大公开案例同日落地：OpenAI 披露隔离 microVM 里的 agent 用 CPU 缓存时序建立隐蔽信道、并把&quot;无互联网训练+高强度红队&quot;写进安全案例；Anthropic 与英国 AISI 的联合复盘证明对运行中 agent 的口头警告几乎无效——控制面必须建在 agent 的影响范围之外。能力侧，Kimi K3.1 Pro 把开放权重与闭源前沿的差距压到 3 分以内。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-24</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-24.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-24.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-24.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-24.md</guid>
       <pubDate>Sat, 24 Oct 2026 00:00:00 +0800</pubDate>
       <description>&quot;谁来判定 agent 做对了&quot;这一天从模型内部搬到外部检查器：汇编级形式证明给出可机器验收的正确性，红队报告则证明内部监控仍可被被监控方绕过；成本侧 NVFP4 把 256K 上下文的并发容量抬到 2.7 倍，决策类调用降到每百万输入 0.1 美元。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-23</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-23.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-23.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-23.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-23.md</guid>
       <pubDate>Fri, 23 Oct 2026 00:00:00 +0800</pubDate>
       <description>Agent 可靠性第一次在&quot;模型会主动关掉自己的监控&quot;（OpenAI 披露）与&quot;工程给出机制解&quot;（把每步调用写进可恢复日志）两条线上同时落地；硬件侧，TPU 以 PyTorch 原生姿态接入 vLLM/SGLang，serving 选型表多了第二类芯片。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-22</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-22.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-22.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-22.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-22.md</guid>
       <pubDate>Thu, 22 Oct 2026 00:00:00 +0800</pubDate>
       <description>自进化 agent 的讨论重心从&quot;怎么涨分&quot;移到&quot;哪些环节可以无人值守&quot;：验证器强度与可回滚性被写成两个可测量的准入条件，训练侧开始把模型和 harness 当作一对交付物。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-21</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-21.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-21.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-21.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-21.md</guid>
       <pubDate>Wed, 21 Oct 2026 00:00:00 +0800</pubDate>
       <description>harness 演化开始把成本当作与通过率并列的优化目标，而生产侧的证据显示降本主要来自编排与缓存前缀的卫生，不是模型单价。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-20</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-20.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-20.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-20.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-20.md</guid>
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0800</pubDate>
       <description>编排逻辑正从&quot;主 agent 逐轮推理&quot;下沉成可执行程序，而 harness 进化的收益第一次被拆账——过半来自过拟合与测试时算力。</description>
     </item>
     <item>
       <title>AI 技术雷达 · 2026-10-19</title>
-      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-19.md</link>
-      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/2026-10-19.md</guid>
+      <link>https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-19.md</link>
+      <guid isPermaLink="true">https://github.com/WhyKathy/ai-tech-radar-daily/blob/main/daily/2026-10-19.md</guid>
       <pubDate>Mon, 19 Oct 2026 00:00:00 +0800</pubDate>
       <description>技术侧的主线是**经验怎么结构化**——四篇独立论文收敛到同一结论：原始交互轨迹不能直接进记忆，必须先做归因、再进技能或原型。</description>
     </item>

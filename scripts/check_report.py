@@ -62,14 +62,21 @@ def check(path: Path) -> tuple[list[str], list[str]]:
 def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     strict = "--strict" in sys.argv
+    daily = ROOT / "daily"
     if args:
         date = args[0].removesuffix(".md")
-        path = ROOT / f"{date}.md"
+        path = daily / f"{date}.md"
+        if not path.exists():
+            path = ROOT / f"{date}.md"  # 兼容定时任务仍写根目录的过渡期
     else:
-        dates = sorted(p.stem for p in ROOT.glob("????-??-??.md"))
+        dates = sorted(p.stem for p in daily.glob("????-??-??.md"))
+        if not dates:
+            dates = sorted(p.stem for p in ROOT.glob("????-??-??.md"))
         if not dates:
             raise SystemExit("未找到日报")
-        path = ROOT / f"{dates[-1]}.md"
+        path = daily / f"{dates[-1]}.md"
+        if not path.exists():
+            path = ROOT / f"{dates[-1]}.md"
     if not path.exists():
         raise SystemExit(f"文件不存在：{path}")
 
